@@ -1,0 +1,16 @@
+{
+  "name": "organizaif",
+  "version": "0.1.0",
+  "description": "Protótipo inicial de organizador de tarefas escolares",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
