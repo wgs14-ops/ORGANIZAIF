@@ -1,1 +1,215 @@
-<!-- OrganizaIF -->
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>OrganizaIF | Organizador escolar</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <span class="brand-mark">O</span>
+
+      <span>OrganizaIF</span>
+
+    </div>
+
+    <span class="tag">Organização escolar</span>
+
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+
+      <div>
+
+        <p class="eyebrow">SEU ESPAÇO DE ESTUDOS</p>
+
+        <h1>Organize sua rotina.<br>
+
+          <span>Uma tarefa de cada vez.</span>
+
+        </h1>
+
+        <p class="intro">
+
+          Cadastre suas atividades e acompanhe o que precisa fazer.
+
+        </p>
+
+      </div>
+
+      <div class="welcome-icon" aria-hidden="true">✓</div>
+
+    </section>
+
+    <section class="summary" aria-label="Resumo das tarefas">
+
+      <article class="summary-card">
+
+        <span>Atividades cadastradas</span>
+
+        <strong id="total">0</strong>
+
+      </article>
+
+      <article class="summary-card">
+
+        <span>Pendentes</span>
+
+        <strong id="pending">0</strong>
+
+      </article>
+
+      <article class="summary-card">
+
+        <span>Concluídas</span>
+
+        <strong id="done">0</strong>
+
+      </article>
+
+    </section>
+
+    <section class="content-grid">
+
+      <section class="panel">
+
+        <div class="panel-heading">
+
+          <div>
+
+            <p class="eyebrow">NOVA ATIVIDADE</p>
+
+            <h2>Adicionar tarefa</h2>
+
+          </div>
+
+        </div>
+
+        <form id="task-form">
+
+          <label for="title">Nome da tarefa</label>
+
+          <input
+
+            id="title"
+
+            name="title"
+
+            type="text"
+
+            placeholder="Ex.: Exercícios de matemática"
+
+            required
+
+            maxlength="90"
+
+          >
+
+          <div class="form-row">
+
+            <div>
+
+              <label for="subject">Disciplina</label>
+
+              <select id="subject" name="subject">
+
+                <option>Matemática</option>
+
+                <option>Programação</option>
+
+                <option>Português</option>
+
+                <option>Física</option>
+
+                <option>Química</option>
+
+                <option>Outra</option>
+
+              </select>
+
+            </div>
+
+            <div>
+
+              <label for="due">Prazo</label>
+
+              <input id="due" name="due" type="date">
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="primary-button">
+
+            + Adicionar tarefa
+
+          </button>
+
+        </form>
+
+        <p class="note">
+
+          Protótipo inicial: as tarefas ficam salvas neste navegador.
+
+        </p>
+
+      </section>
+
+      <section class="panel">
+
+        <div class="tasks-heading">
+
+          <div>
+
+            <p class="eyebrow">SEU PLANEJAMENTO</p>
+
+            <h2>Minhas tarefas</h2>
+
+          </div>
+
+          <span class="small-label">Lista</span>
+
+        </div>
+
+        <div id="task-list" class="task-list"></div>
+
+        <p id="empty" class="empty">
+
+          Nenhuma tarefa cadastrada ainda.
+
+        </p>
+
+      </section>
+
+    </section>
+
+    <footer>
+
+      OrganizaIF · Protótipo acadêmico
+
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
