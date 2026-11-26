@@ -1,0 +1,91 @@
+:root {
+  --ink: #26352e;
+  --muted: #77847c;
+  --green: #426b52;
+  --green-dark: #31523e;
+  --mint: #eaf2e9;
+  --paper: #f7f8f4;
+  --line: #e4e9e1;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topbar {
+  height: 70px; padding: 0 7%; display: flex; align-items: center;
+  justify-content: space-between; background: var(--white); border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 19px; }
+.brand-mark {
+  display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px;
+  color: white; background: var(--green); font-size: 18px;
+}
+.tag, .small-label {
+  background: var(--mint); color: var(--green-dark); padding: 8px 12px;
+  border-radius: 20px; font-size: 12px; font-weight: 600;
+}
+.container { max-width: 1100px; margin: 32px auto; padding: 0 22px; }
+.welcome {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  background: #edf3e9; border-radius: 18px; padding: 30px 36px; margin-bottom: 20px;
+}
+.eyebrow { margin: 0 0 8px; color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; }
+h1 { margin: 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.15; }
+h1 span { color: var(--green); }
+.intro { margin: 14px 0 0; color: #68756b; }
+.welcome-icon {
+  flex: 0 0 72px; height: 72px; display: grid; place-items: center; border-radius: 22px;
+  background: var(--green); color: white; font-size: 35px;
+}
+.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+.summary-card, .panel {
+  background: var(--white); border: 1px solid var(--line); border-radius: 15px;
+}
+.summary-card { padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+.summary-card span { color: var(--muted); font-size: 13px; }
+.summary-card strong { font-size: 28px; color: var(--green-dark); }
+.content-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 20px; }
+.panel { padding: 23px; min-width: 0; }
+.panel-heading, .tasks-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+h2 { margin: 0; font-size: 21px; }
+label { display: block; font-size: 13px; font-weight: 600; margin: 14px 0 7px; }
+input, select {
+  width: 100%; padding: 12px; border: 1px solid #dce3da; border-radius: 9px;
+  background: white; color: var(--ink); font: inherit; font-size: 14px;
+}
+input:focus, select:focus { outline: 2px solid #b8d0bd; border-color: var(--green); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.primary-button {
+  margin-top: 20px; width: 100%; border: 0; border-radius: 9px; padding: 13px;
+  background: var(--green); color: white; font-weight: 700; font-size: 14px; cursor: pointer;
+}
+.primary-button:hover { background: var(--green-dark); }
+.note { color: var(--muted); font-size: 11px; line-height: 1.5; margin: 14px 0 0; }
+.task-list { display: flex; flex-direction: column; gap: 10px; }
+.task {
+  display: flex; align-items: flex-start; gap: 12px; padding: 13px;
+  border: 1px solid var(--line); border-radius: 10px;
+}
+.task input[type="checkbox"] { width: 17px; height: 17px; margin-top: 3px; accent-color: var(--green); }
+.task-main { flex: 1; min-width: 0; }
+.task-title { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
+.task.completed .task-title { text-decoration: line-through; color: var(--muted); }
+.task-meta { margin-top: 5px; color: var(--muted); font-size: 12px; }
+.delete-button { border: 0; background: transparent; color: #9a625b; cursor: pointer; font-size: 12px; padding: 4px; }
+.empty { color: var(--muted); font-size: 14px; padding: 20px 0; text-align: center; }
+footer { text-align: center; color: #9aa39b; font-size: 12px; padding: 26px 0 10px; }
+@media (max-width: 760px) {
+  .content-grid { grid-template-columns: 1fr; }
+  .welcome { padding: 25px; }
+  .summary { gap: 9px; }
+  .summary-card { padding: 14px; }
+  .summary-card span { font-size: 11px; }
+  .topbar { padding: 0 20px; }
+}
+@media (max-width: 440px) {
+  .tag { display: none; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .welcome-icon { flex-basis: 50px; height: 50px; font-size: 25px; border-radius: 15px; }
+}
